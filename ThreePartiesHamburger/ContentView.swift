@@ -16,7 +16,7 @@ struct ContentView: View {
                 .font(.title.bold())
                 .padding(.bottom, 8)
 
-            // Dictionary 를 그대로 순회 → 재료-공급처 쌍의 순서가 뒤죽박죽!
+            // OrderedDictionary 를 그대로 순회 → 넣은 순서(위→아래)가 항상 유지된다!
             ForEach(Array(hamburger.ingredients), id: \.key) { ingredient, supplier in
                 HStack {
                     Text(ingredient)

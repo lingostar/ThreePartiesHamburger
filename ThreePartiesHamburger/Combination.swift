@@ -6,19 +6,21 @@
 //
 
 import Foundation
+import OrderedCollections
 
-/// 재료 → 공급처 를 Dictionary 로 저장한다.
-/// 재료 이름을 키로 주면 공급처를 빠르게 찾을 수 있다. (Dictionary 를 쓰는 진짜 이유)
+/// 재료 → 공급처 매핑을 저장한다.
 struct Hamburger {
-    /// ⚠️ 하지만 Dictionary 는 순서를 보장하지 않아, 층 순서대로 쌓아 보여줄 수 없다!
-    let ingredients: [String: String]
+    /// ✅ 재료 → 공급처 조회는 그대로 두면서, 넣은 순서(층 순서)까지 유지한다.
+    let ingredients: OrderedDictionary<String, String>
 
-    static let sample = Hamburger(ingredients: [
-        "0. 🍞 윗빵": "베를린 바게트",
-        "1. 🥬 양상추": "참한 농부",
-        "2. 🍅 토마토": "적토마 농장",
-        "3. 🧀 치즈": "누가내 치즈",
-        "4. 🥩 패티": "밥스 버거스",
-        "5. 🍞 아랫빵": "베를린 바게트",
-    ])
+    static let sample: Hamburger = {
+        var ingredients: OrderedDictionary<String, String> = [:]
+        ingredients["0. 🍞 윗빵"] = "베를린 바게트"
+        ingredients["1. 🥬 양상추"] = "참한 농부"
+        ingredients["2. 🍅 토마토"] = "적토마 농장"
+        ingredients["3. 🧀 치즈"] = "누가내 치즈"
+        ingredients["4. 🥩 패티"] = "밥스 버거스"
+        ingredients["5. 🍞 아랫빵"] = "베를린 바게트"
+        return Hamburger(ingredients: ingredients)
+    }()
 }
