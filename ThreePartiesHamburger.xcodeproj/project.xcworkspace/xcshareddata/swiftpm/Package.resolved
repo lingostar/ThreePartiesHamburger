@@ -1,6 +1,15 @@
 {
-  "originHash" : "51f90653b2c9f9f7064c0d52159b40bf7d222e5f314be23e62fe28520fec03db",
+  "originHash" : "ebc294dd3b80b070350905e3a6bee0f3dbfb947f2c4ffe0cc80cdee596362850",
   "pins" : [
+    {
+      "identity" : "hamburgerkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lingostar/HamburgerKit.git",
+      "state" : {
+        "revision" : "90b5bd61e3c266b6b8184369bfaf37d4d604aa16",
+        "version" : "1.0.0"
+      }
+    },
     {
       "identity" : "swift-collections",
       "kind" : "remoteSourceControl",

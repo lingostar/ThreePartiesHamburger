@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA00000000000000000000B1 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = AA00000000000000000000B2 /* OrderedCollections */; };
+		AA00000000000000000000C1 /* HamburgerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA00000000000000000000C3 /* HamburgerKit */; };
+		AA00000000000000000000C2 /* BurgerUI in Frameworks */ = {isa = PBXBuildFile; productRef = AA00000000000000000000C4 /* BurgerUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA00000000000000000000B1 /* OrderedCollections in Frameworks */,
+				AA00000000000000000000C1 /* HamburgerKit in Frameworks */,
+				AA00000000000000000000C2 /* BurgerUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,8 @@
 			name = ThreePartiesHamburger;
 			packageProductDependencies = (
 				AA00000000000000000000B2 /* OrderedCollections */,
+				AA00000000000000000000C3 /* HamburgerKit */,
+				AA00000000000000000000C4 /* BurgerUI */,
 			);
 			productName = ThreePartiesHamburger;
 			productReference = DD21FE152FF4A7B1008F7585 /* ThreePartiesHamburger.app */;
@@ -102,6 +108,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AA00000000000000000000B3 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				AA00000000000000000000C5 /* XCRemoteSwiftPackageReference "HamburgerKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DD21FE162FF4A7B1008F7585 /* Products */;
@@ -370,6 +377,14 @@
 				minimumVersion = 1.6.0;
 			};
 		};
+		AA00000000000000000000C5 /* XCRemoteSwiftPackageReference "HamburgerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lingostar/HamburgerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -377,6 +392,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA00000000000000000000B3 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = OrderedCollections;
+		};
+		AA00000000000000000000C3 /* HamburgerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA00000000000000000000C5 /* XCRemoteSwiftPackageReference "HamburgerKit" */;
+			productName = HamburgerKit;
+		};
+		AA00000000000000000000C4 /* BurgerUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA00000000000000000000C5 /* XCRemoteSwiftPackageReference "HamburgerKit" */;
+			productName = BurgerUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

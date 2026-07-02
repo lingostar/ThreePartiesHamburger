@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        TabView {
+            DictionaryDemoView()
+                .tabItem { Label("Dictionary", systemImage: "list.bullet") }
+
+            PackageDemoView()
+                .tabItem { Label("HamburgerKit", systemImage: "shippingbox") }
+        }
+    }
+}
+
+/// OrderedDictionary(swift-collections)로 재료 순서를 보장하는 기존 데모.
+struct DictionaryDemoView: View {
     let hamburger = Hamburger.sample
 
     var body: some View {
